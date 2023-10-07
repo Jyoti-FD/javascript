@@ -1,0 +1,1 @@
+alert("hello, with the help of script src")
