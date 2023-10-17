@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 Form Validation</title>
+</head>
+<style>
+    .form{
+        text-align: center;
+        background-color:pink;
+        margin: 80px;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    button{
+       margin-top: 10px;
+       background-color: blue;
+       color: aliceblue;
+       padding: 10px;
+    }
+</style>
+<body>
+    <div class="form">
+        <h1>FORM</h1>
+        <div class="name">
+            First Name:
+            <input type="text" name="first" id="first"> <span id="error1"></span>
+        </div> <br> <br>
+        <div class="name">
+            Password:
+            <input type="text" name="password" id="password"> <span id="error2"></span>
+        </div> <br> <br>
+        <div class="name">
+            Email ID:
+            <input type="text" name="email" id="email"> <span id="error3"></span>
+        </div> <br> <br>
+        <div class="name">
+            Phone Number:
+            <input type="number" name="Phone" id="Phone" maxlength="10"> <span id="error4"></span>
+        </div>
+        <button onblur="handleValidation()">Submit</button>
+    </div>
+
+
+    <script>
+        function handleValidation(){
+            var a = document.getElementById("first").value
+            console.log(a);
+            if (a == "") {
+                document.getElementById("error1").innerText = "This field is required!"
+                console.log("Empty");
+            } else {
+                document.getElementById("error1").innerText = ""
+                console.log("has some value");
+            }
+        }
+</script>
+</body>
+</html>
