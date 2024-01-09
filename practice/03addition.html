@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+         box-sizing: border-box;
+        }
+        .box{
+            text-align: center;
+            border: 2px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label>First: </label>
+        <input type="text" name="" id="one"> <br><br>
+        <label>Second: </label>
+        <input type="text" name="" id="two"> <br><br>
+        <label>Third: </label>
+        <input type="text" name="" id="three"> <br> <br>
+        <button onclick="add()">Addition</button>
+        <h2 id="answer"></h2>
+    </div>
+
+    <script>
+         function add(){
+        let one = document.getElementById("one").value;
+        let two = document.getElementById("two").value;
+        let three = document.getElementById("three").value;
+        let ans =document.getElementById("answer")
+        ans.innerHTML=Number(one)+Number(two)+Number(three)
+        }
+    </script>
+</body>
+</html>
